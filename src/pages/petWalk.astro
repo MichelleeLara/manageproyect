@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Proyect from "../components/Proyect.astro";
+---
+
+<Layout title="petWalk" >
+    <Proyect
+    bg="#1e1e1e"
+    bgShadow = "#7991ff"
+    idx="petWalk" 
+    idxSite="" 
+    endDate="Agosto/2022" 
+    description="Petwalk es un MVP sobre el funcionamiento de una aplicación móvil en la cual puedes pedir un paseo a domicilio para tu máscota. Cada viaje queda guardado con los datos del paseador, hora peticion del paseo, duración del paseo, entre otros datos importantes."
+    generalFacts={['Registro de usuarios.','Creación de 3 aplicaciones (Trabajadores, usuarios, control de trabajadores)','Solicitar paseo.', 'Acceso al historial de paseos']}
+    challanges={['Comunicación en tiempo real de la aplicación de usuarios y trabajadores.', 'Manejo de estado del trabajador; online u offline.','Lógica de procesos segun vaya avanzando la petición del usuario.', 'Algortimo para la asginacion óptima del paseo.']}
+    ahrefMock="mock_petWalk_dm.webp" 
+    tech = {['Expo (App hibrida)', 'React Navtive' , 'Firebase', 'Firestore', 'Android Studio']}
+    ahrefSource="" 
+    ahrefSite=""/>
+</Layout>

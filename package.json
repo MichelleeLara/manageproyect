@@ -1,0 +1,30 @@
+{
+  "name": "manage_proyects",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "@nextui-org/react": "^2.1.12",
+    "@tabler/icons-react": "^2.40.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "ai": "^2.2.23",
+    "astro": "^3.0.12",
+    "framer-motion": "^10.16.4",
+    "openai": "^4.24.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "openai-edge": "^1.2.2"
+  }
+}

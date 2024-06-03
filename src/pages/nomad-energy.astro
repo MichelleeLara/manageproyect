@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Proyect from "../components/Proyect.astro";
+---
+
+<Layout title="nomad-energy" >
+    <Proyect
+    bg="#1d1d1d"
+    bgShadow = "#f9cb93"
+    idx="nomad-energy" 
+    idxSite="" 
+    endDate="Octubre/2023" 
+    description="Nomad Energy es una aplicación web cuyo funcionamiento general se basa en completar información sobre tu hogar, por ejemplo: qué secciones tienes (sala, recámara, baño, etc.). Al finalizar este proceso, los usuarios con un plan de pago determinado tienen acceso a un panel de control donde pueden visualizar resultados generales y específicos, junto con un menú de herramientas para descargar información, recibir recomendaciones de un agente de inteligencia artificial."
+    generalFacts={['Registro e incio de sesión de usuarios.','Suscripciones de pago.','Configuración del hogar para obtener resultados específicos.', 'Dashboard (Panel de control) para visualizar resultados.', 'Agente de Inteligencia Artificial.', 'Manejo de la información del usuario dentro de la aplicación y fuera (Base de datos).', 'Actulizar y borrar datos.', 'Descargar archivos generados por la app.']}
+    challanges={['Creacion de Webhook (Stripe) para asignar correctamente plan de suscripción.', 'Configuración correcta de proxy para comunicacion entre el front y back.','Navegación dinámica.', 'Contexto global para preservar los datos.', 'Creación de servicio para calcular la enegía en KW por cada sección.', 'Comunicación con la base de datos para modificar o borrar documento.']}
+    ahrefMock="mock_app_nomad.webp" 
+    tech = {['Astro', 'Tailwind' , 'React', 'Mongo DB', 'Zustand', 'Node']}
+    ahrefSource="" 
+    ahrefSite=""/>
+</Layout>

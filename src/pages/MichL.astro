@@ -1,0 +1,47 @@
+---
+import Dashboard from '../components/Dashboard.astro';
+import Layout from '../layouts/Layout.astro';
+import MenuMobile from '../components/MenuMobile.astro';
+import {Chat} from '../components/Chat'
+import { navigate } from 'astro:transitions/client';
+---
+
+<Layout title="Chat IA">
+	<div class="flex  lg:min-h-screen ">
+		
+		<section class=" w-screen absolute bg-[#242529] min-h-screen  text-white md:static" id="body">
+			<div class="mx-5 px-8 pt-10 flex flex-col gap-8 justify-between  min-h-screen">
+				<div class="flex flex-col justify-center items-center gap-4">
+					<div class="bg-[#c7952826] w-fit flex items-center justify-center gap-2 px-5 h-8 rounded-full text-[#c79528] text-sm">
+						<div class="w-2 h-2 bg-[#c79528] rounded-full"></div>
+						<p class="text-xs">En mantenimiento</p>
+					</div>
+					<div transition:name="img_author_help" class="bg-[#bcbce2]  rounded-full flex flex-col items-center justify-center">
+						<img class="w-20" src="/hi_finger.webp" alt="">
+					</div>
+					<h3 class="text-3xl text-center max-w-[340px]  font-semibold">¿Que duda puedo resolverte?</h3>
+					<p class="text-center text-gray-300 max-w-[530px]">Soy <span class="text-[#fff27a]">michL</span> un asistente personalizado con inteligencia artificial.Preguntame lo que necesites saber.</p>
+				</div>
+				<div class="w-full flex items-center flex-col justify-center  ">
+					<Chat client:visible/>
+				</div>
+
+				<a href="#" onclick="window.history.back()" class="absolute">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M5 12l14 0"></path>
+						<path d="M5 12l4 4"></path>
+						<path d="M5 12l4 -4"></path>
+					 </svg>
+				</a>
+			</div>
+		  </section>
+	</div>
+</Layout>
+
+<script>
+
+	function goBack(){
+		window.history.back()
+	}
+</script>

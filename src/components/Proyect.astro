@@ -1,0 +1,158 @@
+---
+import BreadCrumbs from "./BreadCrumbs.astro";
+import Collabs from "./Collabs.astro";
+import TechProyects from "./TechProyects.astro";
+import { navigate } from 'astro:transitions/client';
+import SwitchProyects from "./SwitchProyects.jsx";
+
+const { idx, endDate, description, ahrefMock, ahrefSource, ahrefSite, idxSite, bg, challanges, generalFacts, bgShadow, tech, techIcon} = Astro.props
+console.log(tech);
+---
+
+<section class="bg-[#242529] min-h-screen flex flex-col gap-8 overflow-y-hidden" id="body">
+    <header style={{backgroundColor: bg}} class="border-b-2 border-[#2f2f2f] pt-28 pb-16">
+        <section class="w-screen fixed top-5 z-10 ">
+            <div  class="flex text-white justify-between items-center mx-10 px-3 py-2 rounded-full inset-0 bg-opacity-10 backdrop-blur-sm bg-[#242529] gap-3 border-1 border-[#494a4f]">
+                <a href="/" transition:name="author" class="bg-[#bcbce2] p-2 px-3 rounded-full flex flex-col items-center justify-center">
+                    <img class="w-9" src="/avatar_smile.webp" alt="">
+                </a>
+                <SwitchProyects client:only="react" idx={idx}, remainingProyects = {['petWalk','Tigrillas', 'deposito_are','studio-mkt', 'nomad-energy']}  />
+            </div>
+        </section>
+       <div class="mx-8  flex flex-col gap-8">
+        <BreadCrumbs crumbs = {idx}/>        
+        <div class="flex items-end justify-between flex-wrap gap-4 relative z-[2]">
+            <div class="flex flex-col gap-2">
+                <h2 class="text-2xl font-semibold text-white">Detalles del proyecto</h2>
+                <p class="text-gray-300 text-base">Esto es una vision general del desarrollo que se llevo acabo en este proyecto.</p>
+            </div>
+            <div class="flex overflow-x-auto gap-2 overflow-hidden">
+                <TechProyects techs = {tech} bgShadow={bgShadow} />
+            </div>
+        </div>
+       </div>
+    </header>
+    <div class="flex flex-col mx-8 gap-8 -translate-y-14 ">
+        <div style={{backgroundColor: bgShadow }} class="h-[400px] w-[700px] opacity-45  blur-[300px] rounded-full  absolute -z-10 -left-48 top-40"></div>
+        <div class=" grid gap-7 sm:grid-cols-3">
+            <div style={{backgroundColor: bg}} class="col-span-2 border-2 rounded-xl p-5 px-8 border-[#2f2f2f] flex flex-col gap-8 sm:col-span-3 md:col-span-1">
+                <h3 class="text-gray-200 text-xl text-center font-semibold sm:text-start">Estado del proyecto</h3>
+                <a transition:name={idx} href={ahrefSite} class="h-fit ">
+                    
+                    <img src=`/${ahrefMock}` alt="">
+                    <!-- <div class=`w-full h-[12rem] bg-contain bg-center bg-no-repeat bg-[url(/${ahrefMock})] hover:-translate-y-3 transition-all`></div> -->
+                </a>
+                <div class="flex gap-4 flex-wrap">
+                    <div class="bg-[#28c78026] w-fit flex items-center justify-center gap-2 px-5 py-2 rounded-full text-[#039754] text-sm">
+                        <div class="w-2 h-2 bg-[#28c780] rounded-full"></div>
+                        <p>Activo</p>
+                    </div>
+                    <div class="text-white tracking-wide text-left flex flex-col gap-1">
+                        <p class="text-sm font-semibold">{idx}</p>
+                        <a href={ahrefSite} class="hover:underline text-gray-300 ">
+                            <p class="text-xs text-gray-400 font-normal">{idxSite}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style={{backgroundColor: bg}} class="col-span-2 border-2 rounded-xl p-5 px-8 border-[#2f2f2f] flex flex-col gap-8 justify-between sm:col-span-3 md:col-span-2">
+                <div class="flex flex-wrap gap-3 items-center justify-between">
+                    <h3 class="text-gray-200 text-xl text-center font-semibold">Descripción del proyecto</h3>
+                    <p class="text-xs text-gray-400 font-normal">Fecha de termino: {endDate}</p>
+                    <p class="text-gray-300">
+                        {description}
+                    </p>
+                    <div class="flex justify-between w-full gap-5 mt-5 flex-wrap sm:flex-nowrap">
+                        <div class="w-full flex flex-col gap-1">
+                            <p class="text-gray-200 text-xl font-semibold">Caracteristicas principales</p>
+                            <ul class="text-gray-300 list-decimal flex flex-col gap-2 relative list-inside">
+                                {generalFacts.map((challange:string) => (
+                                    <li class="">{challange}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div class="w-full flex flex-col gap-1">
+                            <p class="text-gray-200 text-xl font-semibold">Retos</p>
+                            <ul class="text-gray-300 list-decimal flex flex-col gap-2 relative list-inside">
+                                {challanges.map((challange:string) => (
+                                    <li class="">{challange}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-end gap-2 relative md:flex-row">
+                    <div transition:name="img_author_help"  class="h-full flex flex-col justify-end">
+                        <div  class="w-fit h-fit bg-cover bg-[#bcbce2] rounded-full flex items-center justify-end flex-col">
+                            <img src="/what.webp" class="w-11" alt="">
+                        </div>
+                    </div>
+                    <a href="/MichL" class="flex items-center  bg-[#202223] border-2 border-[#ffcc009b] rounded-full w-fit h-fit py-2 px-4 relative md:rounded-bl-none md:mb-4">
+                        <div class=" bg-gradient-to-b from-[#ffadb189] to-[#ffcc00d4] rounded-full opacity-10 absolute top-0 bottom-0 right-0 left-0 md:rounded-bl-none">
+                        </div>
+                        <div class="flex gap-1 justify-center items-center">
+                            <p class="text-gray-400 text-xs text-center">¿Tienes alguna duda? estoy aquí por si necesitas ayuda. <span class="text-xl">👋🏼</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 col-span-2 sm:grid-cols-3 sm:col-span-3  md:grid-cols-4">
+                <div style={{backgroundColor: bg}} class="border-[#2f2f2f] border-2 flex flex-col gap-3 p-5 w-full rounded-xl col-span-3 sm:col-span-2">
+                    <h4 class="text-gray-200 text-base font-semibold">Colaboradores</h4>
+                    <div class="flex justify-around flex-wrap gap-14 py-10 xl:gap-7 xl:py-7">
+                        <div class="flex justify-between">
+                            <Collabs root_avatar = 'GraceHii.webp' color = '#ffadb189' job = 'UI Designer' name = 'Grace Miler' />
+                        </div>
+                        <div class="flex justify-between">
+                            <Collabs root_avatar = 'HermeGuiño.webp' color = '#ff593487' job = 'Tech lead' name = 'Thomas Wang' />
+                        </div>
+                        <div class="flex justify-between">
+                            <Collabs root_avatar = 'MadHi.webp' color = '#0073ffa1' job = 'Backend Dev' name = 'Mad Murphy' />
+                        </div>
+                    </div>
+                </div>
+                <div style={{backgroundColor: bg}} class="border-[#2f2f2f] border-2 col-span-3 flex flex-col gap-3 p-5 w-full rounded-xl sm:col-span-1 md:col-span-2 lg:col-span-1 ">
+                    <h4 class="text-gray-200 text-base font-semibold">Source</h4>
+                    <div class="flex items-center flex-wrap justify-center gap-10 mt-7">
+                        <div class="ctabutton bg-[#202223] border-2 border-[#ffffff53] w-fit h-fit flex rounded-md  py-2 px-3 relative">
+                            <div class=" bg-gradient-to-b from-[#ffffff] to-[#ffffff53] rounded-md opacity-10 absolute top-0 bottom-0 right-0 left-0">
+                            </div>
+                            <a href={ahrefSource} class="flex gap-1 justify-center items-center cursor-pointer relative z-30">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                                <p class="text-white text-sm">Código fuente</p>
+                            </a>
+                        </div>
+                        <div class="ctabutton bg-[#202223] border-2 border-[#5d00ffc1] w-fit h-fit flex rounded-full  p-2 relative">
+                            <div class=" bg-gradient-to-b from-[#5d00ff] to-[#5d00ffc1] rounded-full opacity-10 absolute top-0 bottom-0 right-0 left-0">
+                            </div>
+                            <div class="flex gap-1 justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-notion" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 17.5v-6.5h.5l4 6h.5v-6.5" /><path d="M19.077 20.071l-11.53 .887a1 1 0 0 1 -.876 -.397l-2.471 -3.294a1 1 0 0 1 -.2 -.6v-10.741a1 1 0 0 1 .923 -.997l11.389 -.876a2 2 0 0 1 1.262 .33l1.535 1.023a2 2 0 0 1 .891 1.664v12.004a1 1 0 0 1 -.923 .997z" /><path d="M4.5 5.5l2.5 2.5" /><path d="M20 7l-13 1v12.5" /></svg>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div style={{backgroundColor: bg}} class="aurora overflow-x-hidden col-span-3 min-h-[10rem] border-[#2f2f2f] border-2 flex flex-col gap-3  w-full items-center rounded-xl  md:col-span-4 lg:col-span-1  relative">
+                    <div class="h-full w-full flex items-center justify-center">
+                        <div class="w-full h-[.01rem] bg-[#282828]"></div>
+                    </div>
+                    <div class=" flex h-full w-full items-center justify-center gap-12 absolute">
+                        <a class="z-20" href="https://www.linkedin.com/in/michelle-rodriguez-lara/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#0a66c2" class="" width="48" height="48" focusable="false">
+                                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                            </svg>
+                        </a>
+                        <div class="bg-[#fa49033a] rounded-full p-1">
+                            <div class="h-2.5 w-2.5 rounded-full bg-[#fa4a03]"></div>
+                        </div>
+                        <a class="z-20" href="mailto:Mich.IA@hotmail.com">
+                            <img src="/outlook.webp" class="w-14" alt="">
+                        </a>
+                    </div>
+                    <h4 class="text-gray-200 text-base font-semibold text-center absolute bottom-2 w-2/4">Conecta conmigo</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

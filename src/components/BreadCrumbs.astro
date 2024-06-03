@@ -1,0 +1,10 @@
+---
+import { any } from "astro/zod";
+const { crumbs } = Astro.props;
+
+---
+<section>
+    <div class="text-white flex items-center gap-1">
+        <a href="/"  class="text-xs text-[#6f6e6e]">Dashboard</a><span class="text-[#fff27a]">&gt;</span> <p>{crumbs}</p>
+    </div>
+</section>

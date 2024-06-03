@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Proyect from "../components/Proyect.astro";
+---
+
+<Layout title="studio_mkt">
+    <Proyect 
+    bg="#161616"
+    bgShadow = "#026ef2"
+    idx="studio_mkt" 
+    idxSite="c-studio-mkt.vercel.app" 
+    endDate="marzo/2024" 
+    description="Desarrollé un proyecto web para un estudio de marketing que incluyó una landing page moderna y optimizada para SEO, con llamadas a la acción para convertir visitantes en clientes. Además, creé una herramienta interna para gestionar empleados y operaciones, con funciones como control de trabajadores, asignación de proyectos, gestión de tareas y generación de reportes. Este proyecto mejoró la captación de clientes y aumentó la eficiencia operativa del estudio."  
+    generalFacts={['Chat bot IA (atención al cliente)', 'Diseño moderno y responsivo.', 'Posicionamiento web.', 'Rendimeinto óptimo.', 'App interna']}
+    challanges={[
+        'Integrar múltiples funciones usando React.js y gestionar el estado con Zustand.',
+        'Optimizar el rendimiento de la aplicación con técnicas como lazy loading, memoization en React.js y consultas eficientes en MongoDB.',
+        'Implementar medidas de seguridad robustas, incluyendo encriptación de datos con bcrypt, autenticación con JWT y políticas de CORS.'
+    ]}
+    tech = {['Astro', 'Tailwind' , 'React', 'Mongo DB', 'Zustand', 'Node']}
+    ahrefMock="studio_mkt.webp" 
+    ahrefSource="https://github.com/MichelleeLara/C.studio-mkt" 
+    ahrefSite="https://c-studio-mkt.vercel.app"/>
+</Layout>

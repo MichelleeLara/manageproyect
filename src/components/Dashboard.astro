@@ -1,0 +1,135 @@
+---
+import MenuMobile from "./MenuMobile.astro";
+import {Input} from "@nextui-org/react";
+import {SearchIcon} from "./SearchIcon"
+import Construccin from "../pages/construcción.astro";
+import Activo from '../components/Activo.astro'
+import Inactivo from "./Inactivo.astro";
+---
+
+
+<div class="w-full  grid gap-5 place-items-center sm:grid-cols-2 justify-center xl:grid-cols-3">
+  <a href="/studio-mkt" transition:name="studio_mkt" class="w-full max-h-[16.5rem]">
+    <div  class="w-full max-h-[16.5rem]  flex flex-col gap-5 items-center justify-center ">
+      <div class="w-full h-[18rem] bg-contain bg-center bg-no-repeat bg-[url(/studio_mkt.webp)] hover:-translate-y-3 transition-all"></div>
+      <div class="flex gap-4">
+        <Activo/>
+        <div class="text-white tracking-wide text-left flex flex-col gap-1">
+            <p class="text-sm font-semibold">Sofware Solutions</p>
+            <p class="text-xs text-gray-400 font-normal">softsolutionss.netlify.app</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="/Tigrillas" transition:name ="Tigrillas" class="w-full max-h-[16.5rem]">
+    <div  class="w-full max-h-[16.5rem]  flex flex-col gap-5  items-center justify-center ">
+      <div class="w-full h-[18rem] bg-contain bg-center bg-no-repeat bg-[url(/mock_soft_desk_tigrillas.webp)] hover:-translate-y-3 transition-all"></div>
+      <div class="flex gap-4">
+          <Activo/>
+          <div class="text-white tracking-wide text-left flex flex-col gap-1">
+              <p class="text-sm font-semibold">Tigrillas</p>
+              <p class="text-xs text-gray-400 font-normal">tigrillas.com.mx</p>
+          </div>
+      </div>
+    </div>
+  </a>
+  <a href="/deposito_are"  transition:name="deposito_are" class="w-full max-h-[16.5rem]">
+    <div  class="w-full max-h-[16.5rem]  flex flex-col gap-5 items-center justify-center ">
+      <div class="w-full h-[18rem] bg-contain bg-center bg-no-repeat bg-[url(/mock_deposito_are.webp)] hover:-translate-y-3 transition-all"></div>
+      <div class="flex gap-4">
+        <Inactivo/>
+        <div class="text-white tracking-wide text-left flex flex-col gap-1">
+            <p class="text-sm font-semibold">Nomad Technologies</p>
+            <p class="text-xs text-gray-400 font-normal">nomadtechnologies.com.mx</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="/nomad-energy" transition:name="nomad-energy" class="w-full max-h-[16.5rem]">
+    <div  class="w-full max-h-[16.5rem]  flex flex-col gap-5 items-center justify-center ">
+      <div class="w-full h-[18rem] bg-contain bg-center bg-no-repeat bg-[url(/mock_app_nomad.webp)] hover:-translate-y-3 transition-all"></div>
+      <div class="flex gap-4">
+        <Activo/>
+        <div class="text-white tracking-wide text-left flex flex-col gap-1">
+            <p class="text-sm font-semibold">Nomad Energy</p>
+            <p class="text-xs text-gray-400 font-normal">softsolutionss.netlify.app</p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="w-full max-h-[16.5rem] h-[16.5rem] flex flex-col items-center justify-center rounded-2xl">
+    <div  class="w-full max-h-[16.5rem] flex flex-col gap-6 items-center justify-center ">
+      <div class=" flex flex-col items-center justify-center gap-1">
+        <div transition:name="img_author_help" class="bg-[#bcbce2]  rounded-full flex flex-col items-center justify-center">
+          <img class="w-20" src="/hi_finger.webp" alt="">
+        </div>
+        <p class="text-sm text-white">¿Tienes alguna duda?</p>
+      </div>
+
+      <div class=" flex gap-6">
+        <a href="/MichL">
+          <div class="w-fit flex items-center justify-center gap-2 border-1 border-[#fff27a] rounded-full  text-sm p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff27a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"></path>
+              <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"></path>
+           </svg>
+          </div>
+        </a>
+        <a id="callButton"sigie href="tel:5578934420">
+          <div class="flex items-center justify-center gap-2  rounded-full text-[#039754] border-1 border-[#039754] text-sm  p-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+           </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <a href="/petWalk" transition:name="petWalk" class="w-full max-h-[16.5rem]">
+    <div  class="w-full max-h-[16.5rem]  flex flex-col gap-5 items-center justify-center ">
+      <div class="w-full h-[18rem] bg-contain bg-center bg-no-repeat bg-[url(/mock_petWalk_dm.webp)] hover:-translate-y-3 transition-all"></div>
+      <div class="flex gap-4">
+          <div class=" flex gap-2">
+            <div class="bg-[#c7282826] w-fit flex items-center justify-center gap-2 px-5 rounded-full text-[#c72828] text-sm">
+              <div class="w-2 h-2 bg-[#c72828] rounded-full"></div>
+              <p class="text-xs">Sin publicar</p>
+            </div>
+            <div class="bg-[#28c78026] w-fit flex items-center justify-center gap-2 px-5 rounded-full text-[#039754] text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z"></path>
+                <path d="M11 4h2"></path>
+                <path d="M12 17v.01"></path>
+             </svg>
+            </div>
+          </div>
+          <div class="text-white tracking-wide text-left flex flex-col gap-1">
+              <p class="text-sm font-semibold">petWalk</p>
+              <p class="text-xs text-gray-400 font-normal">App móvil</p>
+          </div>
+      </div>
+    </div>
+  </a>
+ 
+  <script>
+    const v = document.getElementById('callButton')
+   
+    v.addEventListener('click' , () =>{
+      if (navigator.vibrate) {
+          navigator.vibrate(200); // Vibrar durante 200 milisegundos
+          alert(1)
+      } else {
+          alert("Tu dispositivo no soporta la API de Vibración");
+          alert(1)
+      }
+    })
+</script>
+ 
+
+</div>
+
+
+
+

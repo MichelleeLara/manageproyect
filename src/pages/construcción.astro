@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="En construcción">
+    <div class="h-screen text-white flex flex-col justify-center items-center gap-5">
+        <div class="bg-[#bcbce2] px-3 py-1 rounded-full" transition:name="img_author"><img class="w-20" src="/what.webp" alt=""></div>
+        <h3 class="text-base md:text-xl">Lo siento estamos en construcción.</h3>
+        <div class="flex gap-3">
+            <a class="item_menu" href="/" data-page="Dashboard" >
+                <li class="flex gap-1 flex-col  py-2 px-5 rounded-2xl cursor-pointer text-sm items-center hover:bg-[#353537]  transition-transform-background hover:duration-500 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-2" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                    </svg>
+                    Dashboard
+                </li>
+            </a>
+            <a class="item_menu" href="MichL" data-page="MichL">
+                <li class="flex gap-1 flex-col  py-2 px-5 rounded-2xl cursor-pointer text-sm items-center hover:bg-[#353537]  transition-transform-background hover:duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"></path>
+                        <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"></path>
+                    </svg>
+                    Mich L
+                </li>
+            </a>
+        </div>
+    </div>
+</Layout>
