@@ -8,13 +8,26 @@ import Proyect from "../components/Proyect.astro";
     bg="#1d1d1d"
     bgShadow = "#f9cb93"
     idx="nomad-energy" 
-    idxSite="" 
+    idxSite="app-energy.vercel.app" 
     endDate="Octubre/2023" 
-    description="Nomad Energy es una aplicación web cuyo funcionamiento general se basa en completar información sobre tu hogar, por ejemplo: qué secciones tienes (sala, recámara, baño, etc.). Al finalizar este proceso, los usuarios con un plan de pago determinado tienen acceso a un panel de control donde pueden visualizar resultados generales y específicos, junto con un menú de herramientas para descargar información, recibir recomendaciones de un agente de inteligencia artificial."
-    generalFacts={['Registro e incio de sesión de usuarios.','Suscripciones de pago.','Configuración del hogar para obtener resultados específicos.', 'Dashboard (Panel de control) para visualizar resultados.', 'Agente de Inteligencia Artificial.', 'Manejo de la información del usuario dentro de la aplicación y fuera (Base de datos).', 'Actulizar y borrar datos.', 'Descargar archivos generados por la app.']}
+    description="Nomad Energy es una aplicación web avanzada diseñada para optimizar el consumo energético en hogares. Utilizando una arquitectura Screaming y principios SOLID, la aplicación permite a los usuarios ingresar información detallada sobre su hogar, incluyendo secciones como sala, recámara, baño, etc. Los usuarios con planes de pago específicos acceden a un sofisticado panel de control que muestra resultados generales y específicos de consumo energético. Además, ofrece un conjunto de herramientas avanzadas, incluyendo la capacidad de descargar informes detallados y recibir recomendaciones personalizadas de un agente de inteligencia artificial para mejorar la eficiencia energética."
+    generalFacts={[
+    'Implementación de un sistema robusto de registro e inicio de sesión de usuarios con manejo seguro de autenticación.',
+    'Integración de un sistema de suscripciones de pago utilizando Stripe, con webhooks para actualización en tiempo real del estado de suscripción.',
+    'Configuración detallada del hogar mediante una interfaz intuitiva para obtener resultados personalizados y precisos.',
+    'Dashboard interactivo y altamente visual para la presentación de resultados de consumo energético, utilizando gráficos y estadísticas avanzadas.',
+    'Integración de un agente de Inteligencia Artificial para proporcionar recomendaciones personalizadas de ahorro energético.',
+    'Implementación de una API RESTful propia para el manejo eficiente de la información del usuario, tanto en la aplicación como en la base de datos MongoDB.',
+    'Funcionalidades CRUD (Crear, Leer, Actualizar, Borrar) para la gestión completa de los datos del usuario.',
+    'Sistema de generación y descarga de informes detallados basados en los datos del usuario y análisis de la IA.',
+    'Optimización del rendimiento frontend mediante el uso avanzado de hooks de React y custom hooks.',
+    'Implementación de un flujo de trabajo Git con branching strategies para un desarrollo colaborativo y eficiente.',
+    'Realización de pruebas unitarias exhaustivas utilizando Jest y Mocha, con implementación de TypeScript para mejorar la calidad y mantenibilidad del código.',
+    'Despliegue integral de la aplicación, incluyendo frontend, backend, y configuración de bases de datos en MongoDB y servicios AWS para escalabilidad.'
+    ]}
     challanges={['Creacion de Webhook (Stripe) para asignar correctamente plan de suscripción.', 'Configuración correcta de proxy para comunicacion entre el front y back.','Navegación dinámica.', 'Contexto global para preservar los datos.', 'Creación de servicio para calcular la enegía en KW por cada sección.', 'Comunicación con la base de datos para modificar o borrar documento.']}
     ahrefMock="mock_app_nomad.webp" 
     tech = {['Astro', 'Tailwind' , 'React', 'Mongo DB', 'Zustand', 'Node']}
     ahrefSource="" 
-    ahrefSite=""/>
+    ahrefSite="https://app-energy.vercel.app"/>
 </Layout>
